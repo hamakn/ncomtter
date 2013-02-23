@@ -37,6 +37,9 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
+gem 'omniauth'
+gem 'omniauth-twitter'
+
 group :test do
   gem 'rspec-rails'
 end
