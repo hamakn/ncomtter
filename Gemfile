@@ -42,5 +42,6 @@ gem 'omniauth-twitter'
 gem 'twitter'
 
 group :test do
+  gem 'pry'
   gem 'rspec-rails'
 end
