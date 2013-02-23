@@ -1,0 +1,5 @@
+<h1>Icons</h1>
+
+<% @cursor.attrs[:users].each do |user| %>
+  <td><%= image_tag(url_for(user[:profile_image_url]), :size => "48x48", :alt => user[:screen_name]) %></td>
+<% end %>

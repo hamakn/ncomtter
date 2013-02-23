@@ -5,6 +5,7 @@ Ncomtter::Application.routes.draw do
   match "/auth/:provider/failure" => "sessions#failure"
 
   get "/following" => "following#index"
+  get "/icons" => "icons#index"
 
   root :to => 'index#index'
 end
