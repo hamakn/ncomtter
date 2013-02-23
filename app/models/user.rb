@@ -14,4 +14,19 @@ class User < ActiveRecord::Base
       user.secret = auth["credentials"]["secret"]
     end
   end
+
+  def following(cursor = -1)
+    twitter_client.following({:count => 200, :cursor => cursor})
+  end
+
+  private
+
+  def twitter_client
+    @client ||= ::Twitter::Client.new({
+      :consumer_key => ENV["TWITTER_KEY"],
+      :consumer_secret => ENV["TWITTER_SECRET"],
+      :oauth_token => self.token,
+      :oauth_token_secret => self.secret,
+    })
+  end
 end

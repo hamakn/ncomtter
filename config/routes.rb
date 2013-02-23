@@ -4,5 +4,7 @@ Ncomtter::Application.routes.draw do
   match "/auth/:provider/callback" => "sessions#create"
   match "/auth/:provider/failure" => "sessions#failure"
 
+  get "/following" => "following#index"
+
   root :to => 'index#index'
 end
