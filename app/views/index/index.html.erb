@@ -1,0 +1,10 @@
+<h1>Cloudn PaaS Hackathon Sample App.</h1>
+
+<% if current_user %>
+  login as:
+  <%= current_user.nickname %>
+  <%= link_to "log out", logout_path, :method => "delete" %>
+<% else %>
+  sign in:
+  <%= link_to image_tag("https://raw.github.com/intridea/authbuttons/master/png/twitter_32.png"), "/auth/twitter" %>
+<% end %>
