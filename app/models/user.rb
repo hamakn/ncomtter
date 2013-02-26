@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
       user.secret = auth["credentials"]["secret"]
       user.save! if user.changed?
     else
-      elsecreate_with_omniauth(auth)
+      create_with_omniauth(auth)
     end
     user
   end
